@@ -1,0 +1,29 @@
+{
+    "host_test": {
+      "mode": "host_test",
+        "local": {
+            "ip": "",
+            "user": ""
+    },
+    "pc1": {
+        "ip":"172.22.60.34",
+        "user":"west1"
+    },
+    "pc2": {
+        "ip":"172.22.60.29",
+        "user":"west2"
+      }
+    },
+  
+    "communication_test": {  
+      "mode": "communication_test",
+      "local": {
+        "ip": "",
+        "user": ""
+      },
+      "remote": {
+        "ip": "172.22.60.29",
+        "user": "west2"      
+      }
+    }
+  }
