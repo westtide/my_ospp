@@ -118,14 +118,14 @@ logging.info('run_ulimit_command_and_save_result successfully, save in \'%s\'',"
 # 使用difflib的比较结果
 file1 = sysctl_res_file_name
 if sys_version == "CentOSStream":
-    command = "scp west2@172.22.60.29:~/ospp/sysctl@openEuler.txt ./data/ "
+    command = "scp west2@172.22.60.29:~/my_ospp/sysctl@openEuler.txt ./data/ "
     try:
         subprocess.run(command, shell=True, check=True)
     except subprocess.CalledProcessError as e:
         print(f"执行命令出错：{e}")
     file2 = "sysctl@openEuler.txt"
 else:
-        command = "scp west1@172.22.60.34:~/ospp/sysctl@CentOSStream.txt ./data/ "
+        command = "scp west1@172.22.60.34:~/my_ospp/sysctl@CentOSStream.txt ./data/ "
         try:
             subprocess.run(command, shell=True, check=True)
         except subprocess.CalledProcessError as e:

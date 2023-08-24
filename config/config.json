@@ -1,4 +1,5 @@
 {
+  "choose": "host_test",
     "host_test": {
       "mode": "host_test",
         "local": {
