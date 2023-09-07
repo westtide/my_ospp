@@ -1,8 +1,9 @@
+import datetime
 import pytest
 import logging
 import subprocess
 import difflib
-import get_sysctl_ulimit_res
+import get_parameters as my_module
 
 #生成时间戳，用于文件命名
 def generate_timestamp_string():
