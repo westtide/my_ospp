@@ -75,7 +75,7 @@ def use_differ_res(os_version,sysctl_res_file_name,save_difflib_res):
     # 根据当前操作系统匹配对方的sysctl@xxx文件，使用scp获取对方配置
     file1 = sysctl_res_file_name
     if os_version == "openEuler":
-        command = "scp west1@172.22.60.199:~/my_ospp/sysctl@CentOSStream.txt ./data/ "
+        command = "scp west1@172.22.60.188:~/my_ospp/sysctl@CentOSStream.txt ./data/ "
         try:
             subprocess.run(command, shell=True, check=True)
         except subprocess.CalledProcessError as e:

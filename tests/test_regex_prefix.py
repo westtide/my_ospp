@@ -2,8 +2,7 @@ import re
 import json
 import pytest
 import logging
-import get_sysctl_ulimit_res
-
+import get_parameters
 #生成时间戳，用于文件命名
 def generate_timestamp_string():
     now = datetime.now()
@@ -17,7 +16,7 @@ file_handler = logging.FileHandler(log_file)
 file_handler.setFormatter(logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s'))
 logging.getLogger().addHandler(file_handler)
 logging.getLogger().setLevel(logging.INFO)
-logging.info('This is a log message')
+logging.info('Test regex prefix start')
 
 
 
