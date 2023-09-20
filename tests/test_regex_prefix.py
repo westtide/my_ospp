@@ -3,7 +3,7 @@ import re
 import json
 import pytest
 import logging
-import get_parameters
+import src.get_parameters as get_parameters
 #生成时间戳，用于文件命名
 def generate_timestamp_string():
     now = datetime.now()
