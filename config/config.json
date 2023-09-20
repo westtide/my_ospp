@@ -3,8 +3,8 @@
     "host_test": {
       "mode": "host_test",
         "local": {
-            "ip": "172.22.60.25",
-            "user": "idk"
+            "ip": "172.22.60.23",
+            "user": "mac"
     },
     "pc1": {
         "ip":"172.22.60.188",
