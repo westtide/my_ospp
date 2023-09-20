@@ -1,3 +1,4 @@
+import re
 def matching_parameters(file_path):
     net_ipv4_items = []
     pattern = r'^net\.ipv4\..*'

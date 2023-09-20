@@ -3,7 +3,7 @@ import pytest
 import logging
 import subprocess
 import difflib
-import get_parameters as my_module
+import src.get_parameters as my_module
 
 #生成时间戳，用于文件命名
 def generate_timestamp_string():
