@@ -31,8 +31,6 @@ file1=""
 file2=""
 
 
-
-
 logging.info("sysctl_res_file_name = \'%s\',ulimit_res_file_name = \'%s\',save_difflib_res = \'%s\',save_statistical_res = \'%s\' ",
              sysctl_res_file_name,ulimit_res_file_name,save_difflib_res,save_statistical_res,
              extra={'logfile': log_file})

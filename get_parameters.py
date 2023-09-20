@@ -75,14 +75,14 @@ def use_differ_res(os_version,sysctl_res_file_name,save_difflib_res):
     # 根据当前操作系统匹配对方的sysctl@xxx文件，使用scp获取对方配置
     file1 = sysctl_res_file_name
     if os_version == "openEuler":
-        command = "scp west1@172.22.60.199:~/my_ospp/sysctl@CentOSStream.txt ./data/ "
+        command = "scp west1@172.22.60.188:~/my_ospp/data/sysctl@CentOSStream.txt ./data/ "
         try:
             subprocess.run(command, shell=True, check=True)
         except subprocess.CalledProcessError as e:
             print(f"执行命令出错：{e}")
         file2 = "sysctl@CentOSStream.txt"
     else:
-        command = "scp west2@172.22.60.189:~/my_ospp/sysctl@openEuler.txt ./data/ "
+        command = "scp west2@172.22.60.189:~/my_ospp/data/sysctl@openEuler.txt ./data/ "
         try:
             subprocess.run(command, shell=True, check=True)
         except subprocess.CalledProcessError as e:
@@ -102,7 +102,7 @@ def use_differ_res(os_version,sysctl_res_file_name,save_difflib_res):
     #保存比较结果diff_result到文件save_difflib_res
     try:
         with open("./data/"+save_difflib_res, 'w') as file:
-            file.write(diff_result)
+            file.write("".join(diff_result))
         logging.info('save diff_result to file \'%s\' successfully', "./data/"+save_difflib_res, extra={'logfile': log_file})
         print(f"比较结果已成功保存到文件: ./data/{save_difflib_res}")
     except IOError:

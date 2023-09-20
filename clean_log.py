@@ -12,7 +12,7 @@ def clean_files_with_prefix(directory, prefix):
 
 # 使用示例
 data_directory = "./log/"
-prefix_to_clean = ["get_sysctl_ulimit"]
+prefix_to_clean = ["get_sysctl_ulimit","load_config"]
 
 for prefix in prefix_to_clean:
     clean_files_with_prefix(data_directory, prefix)
