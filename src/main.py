@@ -1,5 +1,5 @@
 from get_parameters import *
-from load_config import *
+from load_check import *
 import json
 
 with open('config/config.json') as f:

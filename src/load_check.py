@@ -121,3 +121,18 @@ def communication_test_body(data):
     #except Exception as e:
     #    logging.info('本机与远程主机连通性测试失败', extra={'logfile': log_file})
     #    print("本机与远程主机连通性测试失败")
+
+
+def dependence_check():
+    if True:
+        input("请按任意键继续...")
+
+
+def change_sysctl_parameters():
+    if True:
+        input("请按任意键继续...")
+
+
+def change_ulimit_parameters():
+    if True:
+        input("请按任意键继续...")
