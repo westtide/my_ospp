@@ -101,16 +101,16 @@ def communication_test_body(data):
     local = data['communication_test']['local']
     remote = data['communication_test']['remote']
     if not data["communication_test"]["local"]["ip"]:
-        logging.info('本机IP缺失', extra={'logfile': log_file})
+        logging.info('0 本机IP缺失', extra={'logfile': log_file})
         local['ip'] = input("请输入本机IP, 或者直接编辑config.json文件: ")
     if not data["communication_test"]["local"]["user"]:
-        logging.info('本机用户名缺失', extra={'logfile': log_file})
+        logging.info('1 本机用户名缺失', extra={'logfile': log_file})
         local['user']= input("请输入本机用户名, 或者直接编辑config.json文件: ")
     if not data["communication_test"]["remote"]["ip"]:
-        logging.info('远程主机IP缺失', extra={'logfile': log_file})
+        logging.info('2 远程主机IP缺失', extra={'logfile': log_file})
         remote['ip'] = input("请输入远程主机IP, 或者直接编辑config.json文件: ")
     if not data["communication_test"]["remote"]["user"]:
-        logging.info('远程主机用户名缺失', extra={'logfile': log_file})
+        logging.info('3 远程主机用户名缺失', extra={'logfile': log_file})
         remote['user'] = input("请输入远程主机用户名, 或者直接编辑config.json文件: ")
     print("本机IP: ", local['ip'])
     print("本机用户名: ", local['user'])
