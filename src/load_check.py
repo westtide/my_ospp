@@ -172,4 +172,3 @@ def change_ulimit_parameters():
     if True:
         input("请按任意键继续...")
 
-dependence_check( )
