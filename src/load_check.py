@@ -1,8 +1,10 @@
 from datetime import datetime
 import json
+import os
 import paramiko
 import getpass
 import logging
+import subprocess
 
 #生成时间戳，用于文件命名
 def generate_timestamp_string():
@@ -124,9 +126,42 @@ def communication_test_body(data):
 
 
 def dependence_check():
-    if True:
-        input("请按任意键继续...")
+    path = "./tools"
+    print("检查: UnixBench 工具是否存在")
+    if os.path.exists(path+"/byte-unixbench//UnixBench"): 
+            print("检查: UnixBench 已存在,满足 CPU 与内存测试依赖")
+    else:
+        print("tools 目录下不存在 UnixBench,不满足 CPU 与内存测试依赖")
+        if input("是否下载 UnixBench? (y/n)") == "y":
+            try:
+                print("尝试执行命令: cd ./tools && git clone https://github.com/kdlucas/byte-unixbench.git ")
+                subprocess.run("cd ./tools && git clone https://github.com/kdlucas/byte-unixbench.git ", check = True)
+                print("下载UnixBench成功")
+            except:
+                print("下载UnixBench失败,请检查网络连接,或访问 https://github.com/kdlucas/byte-unixbench 手动克隆项目至 tools 目录")
+        else:
+            print("请手动克隆 UnixBench 至 tools 目录")
+            exit(1)
 
+    print("检查: netperf 工具是否存在")
+    if os.path.exists(path+"/netperf"):
+        print("检查: netperf 已存在,满足网络测试依赖")
+    else:
+        if subprocess.run("yum list installed | grep netperf", shell=True, check = True).returncode == 0:
+            print("检查: netperf 已安装,满足网络测试依赖")
+        else:
+            print("tools 目录下不存在 netperf,不满足网络测试依赖")
+            if input("是否下载 netperf? (y/n)") == "y":
+                try:
+                    print("尝试执行命令: cd ./tools && git clone https://github.com/HewlettPackard/netperf.git")
+                    subprocess.run("cd ./tools && git clone https://github.com/HewlettPackard/netperf.git", check = True)
+                    print("下载 netperf 成功")
+                except:
+                    print("下载 netperf 失败,请检查网络连接,或访问 https://github.com/HewlettPackard/netperf 手动克隆项目至 tools 目录")
+            else:
+                print("请手动克隆 netperf 至 tools 目录")
+                exit(1)
+    
 
 def change_sysctl_parameters():
     if True:
@@ -136,3 +171,5 @@ def change_sysctl_parameters():
 def change_ulimit_parameters():
     if True:
         input("请按任意键继续...")
+
+dependence_check( )
