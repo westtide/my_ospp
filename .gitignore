@@ -1,0 +1,4 @@
+./tools/
+.DS_Store
+./__pycache__
+./src/__pycache__
