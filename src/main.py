@@ -1,17 +1,17 @@
-from src.get_parameters import *
-from src.load_check import *
+from get_parameters import *
+from load_check import *
 import json
 
 with open('config/config.json') as f:
     data = json.load(f)
 
 # 选择测试模式
-selected_mode = input("请选择测试模式 (host_test 或 communication_test): ")
+selected_mode = input("host_test:1 \ncommunication_test):2\n请选择测试模式(1/2):\n")
 
-if selected_mode == 'host_test':
+if selected_mode == '1':
     host_test_body(data)
 
-if selected_mode == 'communication_test':
+if selected_mode == '2':
     communication_test_body(data)
 
 else :

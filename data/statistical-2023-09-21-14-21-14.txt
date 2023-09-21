@@ -1,17 +1,17 @@
 file1: , file2:  统计结果为：
 file2 缺失的行有: 175行
-file2 增加的行有: 161行
-file2 修改的行有: 96行
+file2 增加的行有: 162行
+file2 修改的行有: 97行
 ====================================================================
 file2 缺失的行有：
 dev.tty.ldisc_autoload  1
-fs.file-max  9223372036854775807
+fs.dentry-state  5735209	5710239	45	0	5630103	0
 kernel.hung_task_all_cpu_backtrace  0
 kernel.hung_task_check_interval_secs  0
 kernel.qos_level_weights  1	10	100	1000	10000
 kernel.qos_offline_wait_interval_ms  100
 kernel.qos_overload_detect_period_ms  5000
-kernel.random.uuid  8c50b9f2-3de7-4449-a1db-2f74a48ac0ae
+kernel.random.uuid  0006006e-60b3-480c-ba35-631cb543b99e
 kernel.sched_domain.cpu0.domain0.flags  SD_BALANCE_NEWIDLE SD_BALANCE_EXEC SD_BALANCE_FORK SD_WAKE_AFFINE SD_SHARE_CPUCAPACITY SD_SHARE_PKG_RESOURCES SD_PREFER_SIBLING
 kernel.sched_domain.cpu0.domain1.flags  SD_BALANCE_NEWIDLE SD_BALANCE_EXEC SD_BALANCE_FORK SD_WAKE_AFFINE SD_SHARE_PKG_RESOURCES SD_PREFER_SIBLING
 kernel.sched_domain.cpu1.domain0.flags  SD_BALANCE_NEWIDLE SD_BALANCE_EXEC SD_BALANCE_FORK SD_WAKE_AFFINE SD_SHARE_CPUCAPACITY SD_SHARE_PKG_RESOURCES SD_PREFER_SIBLING
@@ -216,6 +216,7 @@ kernel.kptr_restrict  1
 kernel.max_rcu_stall_to_panic  0
 kernel.ns_last_pid  1977462
 kernel.osrelease  4.18.0-500.el8.x86_64
+kernel.perf_event_max_sample_rate  63000
 kernel.printk  4	4	1	7
 kernel.printk_devkmsg  ratelimit
 kernel.pty.nr  1
@@ -344,49 +345,50 @@ vm.drop_caches  0
 vm.force_cgroup_v2_swappiness  0
 ====================================================================
 file2 修改的行有：
-fs.dentry-state  121365	98474	45	0	11069	0
 fs.epoll.max_user_watches  3174871
-fs.file-nr  5440	0	9223372036854775807
-fs.inode-nr  110148	3424
-fs.inode-state  110148	3424	0	0	0	0	0
+fs.file-max  9223372036854775807
+fs.file-nr  5568	0	9223372036854775807
+fs.inode-nr  117621	16275
+fs.inode-state  117621	16275	0	0	0	0	0
 fs.inotify.max_user_watches  8192
 fs.nr_open  1073741816
-fs.quota.syncs  14
+fs.quota.syncs  11908
 fs.suid_dumpable  2
 kernel.dmesg_restrict  1
 kernel.kptr_restrict  0
-kernel.ns_last_pid  1200488
+kernel.ns_last_pid  1205717
 kernel.osrelease  5.10.0-153.23.0.99.oe2203sp2.x86_64
+kernel.perf_event_max_sample_rate  40000
 kernel.printk  7	4	1	7
 kernel.printk_devkmsg  on
-kernel.pty.nr  3
+kernel.pty.nr  7
 kernel.random.entropy_avail  256
 kernel.random.poolsize  256
 kernel.random.write_wakeup_threshold  256
-kernel.sched_domain.cpu0.domain0.max_newidle_lb_cost  3231
-kernel.sched_domain.cpu0.domain1.max_newidle_lb_cost  6102
-kernel.sched_domain.cpu1.domain0.max_newidle_lb_cost  6002
-kernel.sched_domain.cpu1.domain1.max_newidle_lb_cost  7333
-kernel.sched_domain.cpu10.domain0.max_newidle_lb_cost  3802
-kernel.sched_domain.cpu10.domain1.max_newidle_lb_cost  9605
-kernel.sched_domain.cpu11.domain0.max_newidle_lb_cost  2150
-kernel.sched_domain.cpu11.domain1.max_newidle_lb_cost  5204
-kernel.sched_domain.cpu2.domain0.max_newidle_lb_cost  3345
-kernel.sched_domain.cpu2.domain1.max_newidle_lb_cost  13352
-kernel.sched_domain.cpu3.domain0.max_newidle_lb_cost  2408
-kernel.sched_domain.cpu3.domain1.max_newidle_lb_cost  9125
-kernel.sched_domain.cpu4.domain0.max_newidle_lb_cost  3918
-kernel.sched_domain.cpu4.domain1.max_newidle_lb_cost  6625
-kernel.sched_domain.cpu5.domain0.max_newidle_lb_cost  752
-kernel.sched_domain.cpu5.domain1.max_newidle_lb_cost  3580
-kernel.sched_domain.cpu6.domain0.max_newidle_lb_cost  2943
-kernel.sched_domain.cpu6.domain1.max_newidle_lb_cost  12283
-kernel.sched_domain.cpu7.domain0.max_newidle_lb_cost  1903
-kernel.sched_domain.cpu7.domain1.max_newidle_lb_cost  5305
-kernel.sched_domain.cpu8.domain0.max_newidle_lb_cost  4175
-kernel.sched_domain.cpu8.domain1.max_newidle_lb_cost  7987
-kernel.sched_domain.cpu9.domain0.max_newidle_lb_cost  852
-kernel.sched_domain.cpu9.domain1.max_newidle_lb_cost  2003
+kernel.sched_domain.cpu0.domain0.max_newidle_lb_cost  6953
+kernel.sched_domain.cpu0.domain1.max_newidle_lb_cost  15726
+kernel.sched_domain.cpu1.domain0.max_newidle_lb_cost  5784
+kernel.sched_domain.cpu1.domain1.max_newidle_lb_cost  12922
+kernel.sched_domain.cpu10.domain0.max_newidle_lb_cost  6088
+kernel.sched_domain.cpu10.domain1.max_newidle_lb_cost  24215
+kernel.sched_domain.cpu11.domain0.max_newidle_lb_cost  4869
+kernel.sched_domain.cpu11.domain1.max_newidle_lb_cost  23332
+kernel.sched_domain.cpu2.domain0.max_newidle_lb_cost  6127
+kernel.sched_domain.cpu2.domain1.max_newidle_lb_cost  14502
+kernel.sched_domain.cpu3.domain0.max_newidle_lb_cost  8161
+kernel.sched_domain.cpu3.domain1.max_newidle_lb_cost  14870
+kernel.sched_domain.cpu4.domain0.max_newidle_lb_cost  4465
+kernel.sched_domain.cpu4.domain1.max_newidle_lb_cost  15732
+kernel.sched_domain.cpu5.domain0.max_newidle_lb_cost  4801
+kernel.sched_domain.cpu5.domain1.max_newidle_lb_cost  18296
+kernel.sched_domain.cpu6.domain0.max_newidle_lb_cost  4529
+kernel.sched_domain.cpu6.domain1.max_newidle_lb_cost  13912
+kernel.sched_domain.cpu7.domain0.max_newidle_lb_cost  7421
+kernel.sched_domain.cpu7.domain1.max_newidle_lb_cost  14957
+kernel.sched_domain.cpu8.domain0.max_newidle_lb_cost  5603
+kernel.sched_domain.cpu8.domain1.max_newidle_lb_cost  15817
+kernel.sched_domain.cpu9.domain0.max_newidle_lb_cost  5489
+kernel.sched_domain.cpu9.domain1.max_newidle_lb_cost  13784
 kernel.seccomp.actions_avail  kill_process kill_thread trap errno user_notif trace log allow
 kernel.seccomp.actions_logged  kill_process kill_thread trap errno user_notif trace log
 kernel.sysrq  0
@@ -428,7 +430,7 @@ net.ipv6.conf.all.accept_redirects  0
 net.ipv6.conf.default.accept_redirects  0
 net.ipv6.conf.enp1s0.accept_redirects  0
 net.ipv6.conf.virbr0.accept_redirects  0
-net.netfilter.nf_conntrack_count  6
+net.netfilter.nf_conntrack_count  33
 user.max_cgroup_namespaces  60555
 user.max_inotify_watches  8192
 user.max_ipc_namespaces  60555
