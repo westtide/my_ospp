@@ -1,3 +1,4 @@
+```bash
 .
 ├── config              
 │   ├── change.json
@@ -32,16 +33,6 @@
 │   ├── systemctl@centos.txt
 │   └── systemctl@openeuler.txt
 ├── __pycache__
-│   ├── benchmark_test.cpython-39.pyc
-│   ├── clean_data.cpython-39.pyc
-│   ├── clean_log.cpython-39.pyc
-│   ├── get_parameters.cpython-37.pyc
-│   ├── get_parameters.cpython-39.pyc
-│   ├── get_sysctl_ulimit_res.cpython-39.pyc
-│   ├── load_config.cpython-37.pyc
-│   ├── load_config.cpython-39.pyc
-│   ├── regex_prefix.cpython-39.pyc
-│   └── set_parameters.cpython-39.pyc
 ├── README.md
 ├── regex_test.txt
 ├── src
@@ -66,3 +57,6 @@
     └── requirement.txt
 
 9 directories, 56 files
+
+```
+
